@@ -1,0 +1,54 @@
+------------------------------------------------------------------------------------------------------------------------------
+                                                            MYTEAM PROTOCOL
+
+-> There isn't a protocol for the client to server.
+
+
+-> How the server answer to the client:
+
+STRUCTURE OF A ANSWER SERVER TO CLIENT -> STATUS:TYPE_OF_THE_DEMAND:DATA1\aDATA2:DATA1\aDATA2\aDATA3:\n\r
+Each ":" is used to separate the STATUS, TYPE_OF_THE_DEMAND, and each token.
+A token is an set of data from the same thing like a team, channel or message.
+In a token the symbol '\a' is used to separate the data.
+
+STATUS: Status of the demand. Can be OK or ERROR
+
+TYPE_OF_THE_DEMAND: Depends of the demand of the client
+
+list of demand with STATUS = OK:
+    - LOGGED_IN
+    - LOGGED_OUT
+    - PRIVATE_MESSAGE_RECEIVED
+    - THREAD_REPLY_RECEIVE
+    - TEAM_CREATED
+    - UNKNOWN
+    - HELP
+    - CHANNEL_CREATED
+    - THREAD_CREATE
+    - PRINT_USERS
+    - PRINT_TEAMS
+    - PRINT_CHANNELS
+    - PRINT_THREADS
+    - PRINT_REPLIES
+    - PRINT_USER
+    - PRINT_TEAM
+    - PRINT_CHANNEL
+    - PRINT_THREAD
+    - PRINT_TEAM_CREATED
+    - PRINT_CHANNEL_CREATED
+    - PRINT_THREAD_CREATED
+    - PRINT_THREAD_REPLY_CREATED
+    - PRINT_SUBSCRIBED
+    - PRINT_UNSUBSCRIBED
+    - PRIVATE_MESSAGE_RECEIVED
+
+list of demand with STATUS = ERROR:
+    - ERROR_UNKNOWN_TEAM
+    - ERROR_UNKNOWN_CHANNEL
+    - ERROR_UNKNOWN_USER
+    - ERROR_UNKNOWN_THREAD
+    - ERROR_UNAUTHORIZED
+    - ERROR_ALREADY_EXIST
+    - UNKNOWN
+
+------------------------------------------------------------------------------------------------------------------------------
